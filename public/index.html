@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+        <!--Icons-->
+        <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/fonts/bootstrap-icons/bootstrap-icons.min.css">
+        <!--Iconsmind Icons-->
+        <link rel="stylesheet" href="assets/fonts/iconsmind/iconsmind.css">
+        <!--AOS Animations-->
+        <link rel="stylesheet" href="assets/vendor/node_modules/css/aos.css">
+
+
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+        <!--Prism css for code snippets-->
+        <link rel="stylesheet"
+            href="assets/vendor/node_modules/css/prism-tomorrow.css">
+        <!-- Main CSS -->
+        <link href="assets/css/theme.css" rel="stylesheet">
+        <title>Instituto Provincial de Estadísticas y Ciencia de Datos</title>
+    </head>
+
+    <body class="bg-white"> 
+        <!--Header Start-->
+        <header class="z-fixed header-transparent">
+          <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container position-relative">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo/logo.png" alt="" class="img-fluid">
+                </a>
+
+                <div class="d-flex align-items-center navbar-no-collapse-items order-lg-last">
+                    <button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-demo-1" aria-controls="navbar-demo-1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-demo-1">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item me-3">
+                            <a href="#" class="nav-link">Institucional</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="#" class="nav-link">Operativos</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="#" class="nav-link">Noticias</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="#" class="nav-link">Geoestadística</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Datos Abiertos</a>
+                        </li>
+						<li class="nav-item">
+                            <a href="#" class="nav-link">Censo 2022</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
+
+        <!--Main content-->
+        <main>
+            <!--::Start Hero HTML5 Video::-->
+            <section class="vh-75 bg-custom text-white position-relative overflow-hidden">
+                 <!--:Video:-->
+                <div class="w-100 h-100 opacity-90 position-absolute end-0 top-0 bg-cover bg-no-repeat bg-center" style="background-image: url('assets/videos/officeloop-cover.jpg');">
+                    <div class="jarallax bg-dark h-100 w-100" data-video-src="mp4:./assets/videos/bg-video-2.mp4">
+                    </div>
+                </div>
+                <div class="container py-9 py-lg-11 position-relative z-1 indicadores">
+                    <div class="row pt-7 align-items-center">
+                        <div class="col-lg-11 mx-auto text-center mb-5 mb-lg-0">
+                           <img class="w-100" src="./assets/img/indicadores.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+			<section class="">
+				<div class="w-100 d-flex justify-content-center"><img class="w-60 position-absolute otros" src="./assets/img/otros.png" alt=""></div>
+				<img class="w-100 position-absolute graphics" src="./assets/img/graphics.png" alt="">
+				<img class="w-100 gob" src="./assets/img/gob.png" alt="">
+			</section>
+            <!--::/End Hero HTML5 Video::--> 
+        </main>
+         
+
+
+        <!-- begin Back to Top button -->
+        <a href="#" class="toTop"><svg class="progress-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="0, 251.2"></circle>
+</svg>
+            <i class="bi bi-chevron-up"></i>
+        </a>
+        <!-- scripts -->
+        <script src="assets/js/theme.bundle.min.js"></script>
+
+        <!--Copy to clipboard + prismJs-->
+        <script src="assets/vendor/node_modules/js/prism.js"></script>
+        <script src="assets/vendor/node_modules/js/clipboard.min.js"></script>
+        <script>
+            /* Clipboard JS - Copy code button */
+            var cl = document.querySelector('.copy-link');
+            if (typeof !!cl && (cl) != 'undefined' && cl != null) {
+                var cle = document.querySelectorAll('.copy-link');
+                cle.forEach(el => {
+                    el.addEventListener("click", function () {
+                        var theButton = this;
+                        var copyId = this.getAttribute('id');
+                        var clipboard = new ClipboardJS('#' + copyId);
+
+                        clipboard.on('success', function (e) {
+                            e.clearSelection();
+                            theButton.innerHTML = 'Copied!';
+                            setTimeout(function () {
+                                theButton.innerHTML = 'Copy code';
+                            }, 5000);
+                        });
+                    });
+                });
+            }
+
+        </script>
+    </body>
+
+</html>
