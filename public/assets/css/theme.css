@@ -24037,4 +24037,15 @@ span.flatpickr-weekday,
 .indicadores {
   margin-top: -30px;
 }
+
+.pattern-overlay {
+  background-image: url(https://estadistica.corrientes.gob.ar/images/pattern.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0.6;
+}
 /*# sourceMappingURL=theme.css.map */
